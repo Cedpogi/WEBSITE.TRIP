@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>trip ko lang</title>
+  <style>
+    body {
+      font-size: BOLD;
+      text-align: center;
+      margin-top: 50px;
+      background-color: rgb(29, 239, 235);
+    }
+    #yesBtn, #noBtn {
+      padding: 30px 30px;
+      font-size: 22px;
+      position: top;
+      -webkit-text-fill-color: rgb(0, 0, 0);
+      font-family: Impact,'bold';
+    }
+    #message {
+      display: none;
+      margin-top: 30px;
+    }
+    #message img {
+      max-width: 500px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+  </style>
+</head>
+<body>
+  
+    <h1>Toll Pakopya sa Genmath😊</h1>
+  <button id="yesBtn">sige</button>
+  <button id="noBtn">yoko</button>
+ 
+
+  <div id="message">
+    <img src="https://www.meme-arsenal.com/memes/ad03ce4bf6990cff383e17349496192c.jpg" alt="Cute Image">
+    <h2>yown kaya sayo ko eh!❤️</h2>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn  = document.getElementById("noBtn");
+    const message = document.getElementById("message");
+
+    yesBtn.addEventListener("click", () => {
+      // hide buttons
+      yesBtn.style.display = "none";
+      noBtn.style.display = "none";
+      // show message
+      message.style.display = "block";
+    });
+
+    noBtn.addEventListener("mouseover", () => {
+      // Move NO button to a random position
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 50));
+      noBtn.style.position = "absolute";
+      noBtn.style.left = x + "px";
+      noBtn.style.top  = y + "px";
+    });
+  </script>
+</body>
+</html>
